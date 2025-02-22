@@ -1,5 +1,8 @@
+using MassTransit;
+
 namespace OrderTerminal;
 
+[EntityName("order")]
 public class Order (List<int> dishes)
 {
     private static int _orderCounter = 0;

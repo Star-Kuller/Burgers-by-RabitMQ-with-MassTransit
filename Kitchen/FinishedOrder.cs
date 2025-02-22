@@ -1,5 +1,8 @@
+using MassTransit;
+
 namespace Kitchen;
 
+[EntityName("finished_order")]
 public class FinishedOrder(Order order)
 {
     public Guid Id { get; set; } = order.Id;

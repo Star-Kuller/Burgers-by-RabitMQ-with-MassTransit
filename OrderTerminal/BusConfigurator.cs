@@ -1,4 +1,5 @@
 using MassTransit;
+using Newtonsoft.Json;
 
 namespace OrderTerminal;
 
@@ -12,6 +13,13 @@ public static class BusConfigurator
             {
                 h.Username("guest");
                 h.Password("guest");
+            });
+            
+            cfg.UseNewtonsoftJsonSerializer();
+            cfg.ConfigureNewtonsoftJsonDeserializer(settings =>
+            {
+                settings.TypeNameHandling = TypeNameHandling.None; // Игнорировать неймспейсы
+                return settings;
             });
         });
     }

@@ -1,5 +1,8 @@
+using MassTransit;
+
 namespace NotificationBoard;
 
+[EntityName("order")]
 public class Order
 {
     public Guid Id { get; set; }

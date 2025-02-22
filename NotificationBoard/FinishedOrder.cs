@@ -1,5 +1,8 @@
+using MassTransit;
+
 namespace NotificationBoard;
 
+[EntityName("finished_order")]
 public class FinishedOrder
 {
     public Guid Id { get; set; }
