@@ -2,7 +2,8 @@ using MassTransit;
 
 namespace Kitchen;
 
-[EntityName("finished_order")]
+[EntityName(nameof(FinishedOrder))]
+[MessageUrn(nameof(FinishedOrder))]
 public class FinishedOrder(Order order)
 {
     public Guid Id { get; set; } = order.Id;

@@ -2,7 +2,8 @@ using MassTransit;
 
 namespace OrderTerminal;
 
-[EntityName("order")]
+[EntityName(nameof(Order))]
+[MessageUrn(nameof(Order))]
 public class Order (List<int> dishes)
 {
     private static int _orderCounter = 0;

@@ -24,13 +24,6 @@ public static class BusConfigurator
             {
                 e.Consumer<FinishedOrderConsumer>();
             });
-            
-            cfg.UseNewtonsoftJsonSerializer();
-            cfg.ConfigureNewtonsoftJsonDeserializer(settings =>
-            {
-                settings.TypeNameHandling = TypeNameHandling.None; // Игнорировать неймспейсы
-                return settings;
-            });
         });
     }
 }

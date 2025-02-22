@@ -2,7 +2,8 @@ using MassTransit;
 
 namespace NotificationBoard;
 
-[EntityName("finished_order")]
+[EntityName(nameof(FinishedOrder))]
+[MessageUrn(nameof(FinishedOrder))]
 public class FinishedOrder
 {
     public Guid Id { get; set; }
