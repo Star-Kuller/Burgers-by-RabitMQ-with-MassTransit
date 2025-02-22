@@ -1,0 +1,59 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  kitchen-1:
+    build:
+      context: "C:\\MyProjects\\BurgersByRabitMQ MassTransient"
+      dockerfile: "Kitchen/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/Kitchen.dll"
+    environment:
+      DOTNET_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "kitchen:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\UserD\\.nuget\\packages:/home/app/.nuget/packages"
+    - "C:\\MyProjects\\BurgersByRabitMQ MassTransient\\Kitchen:/app:rw"
+    - "C:\\MyProjects\\BurgersByRabitMQ MassTransient:/src:rw"
+    working_dir: "/app"
+  kitchen-2:
+    build:
+      context: "C:\\MyProjects\\BurgersByRabitMQ MassTransient"
+      dockerfile: "Kitchen/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/Kitchen.dll"
+    environment:
+      DOTNET_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "kitchen:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\UserD\\.nuget\\packages:/home/app/.nuget/packages"
+    - "C:\\MyProjects\\BurgersByRabitMQ MassTransient\\Kitchen:/app:rw"
+    - "C:\\MyProjects\\BurgersByRabitMQ MassTransient:/src:rw"
+    working_dir: "/app"
+  notification-board:
+    build:
+      context: "C:\\MyProjects\\BurgersByRabitMQ MassTransient"
+      dockerfile: "NotificationBoard/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/NotificationBoard.dll"
+    environment:
+      DOTNET_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "notificationboard:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\UserD\\.nuget\\packages:/home/app/.nuget/packages"
+    - "C:\\MyProjects\\BurgersByRabitMQ MassTransient\\NotificationBoard:/app:rw"
+    - "C:\\MyProjects\\BurgersByRabitMQ MassTransient:/src:rw"
+    working_dir: "/app"
